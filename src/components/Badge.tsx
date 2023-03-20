@@ -1,15 +1,17 @@
-import React from "react";
+import React from 'react';
 
-type BadgeLabel = "area" | "population";
+type BadgeLabel = 'area' | 'population';
 
-interface Badge {
+interface BadgeProps {
   color: string;
   value: number;
   label: BadgeLabel;
 }
 
-export const Badge = ({ color, value, label }: Badge) => {
+export const Badge = ({ color, value, label }: BadgeProps) => {
   return (
-    <p className={`m-3 p-2 w-25 badge ${color}`}>{`${label}: ${value}`}</p>
+    <p className={`m-3 p-2 w-25 badge ${color}`}>
+      {label}: {value}
+    </p>
   );
 };

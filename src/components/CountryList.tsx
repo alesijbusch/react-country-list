@@ -1,6 +1,6 @@
-import React from "react";
-import { Country } from "../types";
-import { CountryItem } from "../components/CountryItem";
+import React from 'react';
+import { Country } from '../types';
+import { CountryItem } from '../components/CountryItem';
 
 interface CountryListProps {
   countries: Country[];
@@ -9,7 +9,9 @@ interface CountryListProps {
 export const CountryList = ({ countries }: CountryListProps) => {
   return (
     <ul className="list-group pt-3">
-      <CountryItem countries={countries} />
+      {countries.map((country) => {
+        return <CountryItem countries={country} />;
+      })}
     </ul>
   );
 };

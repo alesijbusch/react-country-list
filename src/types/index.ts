@@ -15,7 +15,7 @@ interface CountryFlag {
 interface CountryName {
   common: string;
   official: string;
-  nativeName: CountryNativeNameKey;
+  nativeName: CountryNativeAbbreviation;
 }
 
 interface CountryNativeName {
@@ -23,8 +23,8 @@ interface CountryNativeName {
   common: string;
 }
 
-interface CountryNativeNameKey {
-  [key: string]: CountryNativeName | undefined;
+interface CountryNativeAbbreviation {
+  [titleAbbreviation: string]: CountryNativeName | undefined;
 }
 
 interface Country {

@@ -1,7 +1,7 @@
-import React from "react";
-import countries from "./maretials/country-data.json";
-import { CountryList } from "./components/CountryList";
-import { transformCountries } from "./mappers/transformCountries";
+import React from 'react';
+import countries from './materials/country-data.json';
+import { CountryList } from './components/CountryList';
+import { transformCountries } from './mappers/transformCountries';
 
 export const App = () => {
   const transformedCountries = transformCountries(countries);
